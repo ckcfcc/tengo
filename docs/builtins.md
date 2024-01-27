@@ -3,7 +3,7 @@
 ## format
 
 Returns a formatted string. The first argument must be a String object. See
-[this](https://github.com/d5/tengo/blob/master/docs/formatting.md) for more
+[this](https://github.com/ckcfcc/tengo/blob/master/docs/formatting.md) for more
 details on formatting.
 
 ```golang
@@ -139,7 +139,7 @@ type_name([1, 2, 3]) // array
 ## string
 
 Tries to convert an object to string object. See
-[Runtime Types](https://github.com/d5/tengo/blob/master/docs/runtime-types.md)
+[Runtime Types](https://github.com/ckcfcc/tengo/blob/master/docs/runtime-types.md)
 for more details on type conversion.
 
 ```golang
@@ -158,7 +158,7 @@ v = string(undefined, false)  // v == false
 ## int
 
 Tries to convert an object to int object. See
-[this](https://github.com/d5/tengo/blob/master/docs/runtime-types.md)
+[this](https://github.com/ckcfcc/tengo/blob/master/docs/runtime-types.md)
 for more details on type conversion.
 
 ```golang
@@ -177,7 +177,7 @@ v = int(undefined, false) // v == false
 ## bool
 
 Tries to convert an object to bool object. See
-[this](https://github.com/d5/tengo/blob/master/docs/runtime-types.md) for more
+[this](https://github.com/ckcfcc/tengo/blob/master/docs/runtime-types.md) for more
 details on type conversion.
 
 ```golang
@@ -187,7 +187,7 @@ v := bool(1) //  v == true
 ## float
 
 Tries to convert an object to float object. See
-[this](https://github.com/d5/tengo/blob/master/docs/runtime-types.md) for more
+[this](https://github.com/ckcfcc/tengo/blob/master/docs/runtime-types.md) for more
 details on type conversion.
 
 ```golang
@@ -206,7 +206,7 @@ v = float(undefined, false)    // v == false
 ## char
 
 Tries to convert an object to char object. See
-[this](https://github.com/d5/tengo/blob/master/docs/runtime-types.md) for more
+[this](https://github.com/ckcfcc/tengo/blob/master/docs/runtime-types.md) for more
 details on type conversion.
 
 ```golang
@@ -225,7 +225,7 @@ v = char(undefined, false)  // v == false
 ## bytes
 
 Tries to convert an object to bytes object. See
-[this](https://github.com/d5/tengo/blob/master/docs/runtime-types.md) for more
+[this](https://github.com/ckcfcc/tengo/blob/master/docs/runtime-types.md) for more
 details on type conversion.
 
 ```golang

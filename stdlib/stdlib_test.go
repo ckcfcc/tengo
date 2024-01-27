@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/d5/tengo/v2"
-	"github.com/d5/tengo/v2/require"
-	"github.com/d5/tengo/v2/stdlib"
+	"github.com/ckcfcc/tengo/v2"
+	"github.com/ckcfcc/tengo/v2/require"
+	"github.com/ckcfcc/tengo/v2/stdlib"
 )
 
 type ARR = []interface{}

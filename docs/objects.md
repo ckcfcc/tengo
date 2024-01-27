@@ -10,7 +10,7 @@
 
 In Tengo, all object types _(both [runtime types](#runtime-object-types) and
 [user types](#user-object-types))_ must implement
-[Object](https://godoc.org/github.com/d5/tengo#Object) interface.
+[Object](https://godoc.org/github.com/ckcfcc/tengo#Object) interface.
 
 ### Object Interface
 
@@ -60,7 +60,7 @@ IsFalsy() bool
 ```
 
 IsFalsy method should return true if the underlying value is considered to be
-[falsy](https://github.com/d5/tengo/blob/master/docs/runtime-types.md#objectisfalsy).
+[falsy](https://github.com/ckcfcc/tengo/blob/master/docs/runtime-types.md#objectisfalsy).
 
 ```golang
 Equals(o Object) bool
@@ -157,7 +157,7 @@ Iterate() Iterator
 ```
 
 The Iterate method should return another object that implements
-[Iterator](https://godoc.org/github.com/d5/tengo#Iterator) interface.
+[Iterator](https://godoc.org/github.com/ckcfcc/tengo#Iterator) interface.
 
 ### Iterator Interface
 
@@ -193,40 +193,40 @@ again.
 
 These are the basic types Tengo runtime supports out of the box:
 
-- Primitive value types: [Int](https://godoc.org/github.com/d5/tengo#Int),
-  [String](https://godoc.org/github.com/d5/tengo#String),
-  [Float](https://godoc.org/github.com/d5/tengo#Float),
-  [Bool](https://godoc.org/github.com/d5/tengo#ArrayIterator),
-  [Char](https://godoc.org/github.com/d5/tengo#Char),
-  [Bytes](https://godoc.org/github.com/d5/tengo#Bytes),
-  [Time](https://godoc.org/github.com/d5/tengo#Time)
-- Composite value types: [Array](https://godoc.org/github.com/d5/tengo#Array),
-  [ImmutableArray](https://godoc.org/github.com/d5/tengo#ImmutableArray),
-  [Map](https://godoc.org/github.com/d5/tengo#Map),
-  [ImmutableMap](https://godoc.org/github.com/d5/tengo#ImmutableMap)
+- Primitive value types: [Int](https://godoc.org/github.com/ckcfcc/tengo#Int),
+  [String](https://godoc.org/github.com/ckcfcc/tengo#String),
+  [Float](https://godoc.org/github.com/ckcfcc/tengo#Float),
+  [Bool](https://godoc.org/github.com/ckcfcc/tengo#ArrayIterator),
+  [Char](https://godoc.org/github.com/ckcfcc/tengo#Char),
+  [Bytes](https://godoc.org/github.com/ckcfcc/tengo#Bytes),
+  [Time](https://godoc.org/github.com/ckcfcc/tengo#Time)
+- Composite value types: [Array](https://godoc.org/github.com/ckcfcc/tengo#Array),
+  [ImmutableArray](https://godoc.org/github.com/ckcfcc/tengo#ImmutableArray),
+  [Map](https://godoc.org/github.com/ckcfcc/tengo#Map),
+  [ImmutableMap](https://godoc.org/github.com/ckcfcc/tengo#ImmutableMap)
 - Functions:
-  [CompiledFunction](https://godoc.org/github.com/d5/tengo#CompiledFunction),
-  [BuiltinFunction](https://godoc.org/github.com/d5/tengo#BuiltinFunction),
-  [UserFunction](https://godoc.org/github.com/d5/tengo#UserFunction)
-- [Iterators](https://godoc.org/github.com/d5/tengo#Iterator):
-  [StringIterator](https://godoc.org/github.com/d5/tengo#StringIterator),
-  [ArrayIterator](https://godoc.org/github.com/d5/tengo#ArrayIterator),
-  [MapIterator](https://godoc.org/github.com/d5/tengo#MapIterator),
-  [ImmutableMapIterator](https://godoc.org/github.com/d5/tengo#ImmutableMapIterator)
-- [Error](https://godoc.org/github.com/d5/tengo#Error)
-- [Undefined](https://godoc.org/github.com/d5/tengo#Undefined)
-- Other internal objects: [Break](https://godoc.org/github.com/d5/tengo#Break),
-  [Continue](https://godoc.org/github.com/d5/tengo#Continue),
-  [ReturnValue](https://godoc.org/github.com/d5/tengo#ReturnValue)
+  [CompiledFunction](https://godoc.org/github.com/ckcfcc/tengo#CompiledFunction),
+  [BuiltinFunction](https://godoc.org/github.com/ckcfcc/tengo#BuiltinFunction),
+  [UserFunction](https://godoc.org/github.com/ckcfcc/tengo#UserFunction)
+- [Iterators](https://godoc.org/github.com/ckcfcc/tengo#Iterator):
+  [StringIterator](https://godoc.org/github.com/ckcfcc/tengo#StringIterator),
+  [ArrayIterator](https://godoc.org/github.com/ckcfcc/tengo#ArrayIterator),
+  [MapIterator](https://godoc.org/github.com/ckcfcc/tengo#MapIterator),
+  [ImmutableMapIterator](https://godoc.org/github.com/ckcfcc/tengo#ImmutableMapIterator)
+- [Error](https://godoc.org/github.com/ckcfcc/tengo#Error)
+- [Undefined](https://godoc.org/github.com/ckcfcc/tengo#Undefined)
+- Other internal objects: [Break](https://godoc.org/github.com/ckcfcc/tengo#Break),
+  [Continue](https://godoc.org/github.com/ckcfcc/tengo#Continue),
+  [ReturnValue](https://godoc.org/github.com/ckcfcc/tengo#ReturnValue)
 
 See
-[Runtime Types](https://github.com/d5/tengo/blob/master/docs/runtime-types.md)
+[Runtime Types](https://github.com/ckcfcc/tengo/blob/master/docs/runtime-types.md)
 for more details on these runtime types.
 
 ## User Object Types
 
 Users can easily extend and add their own types by implementing the same
-[Object](https://godoc.org/github.com/d5/tengo#Object) interface and the
+[Object](https://godoc.org/github.com/ckcfcc/tengo#Object) interface and the
 default `ObjectImpl` implementation. Tengo runtime will treat them in the
 same way as its runtime types with no performance overhead.
 
@@ -290,7 +290,7 @@ func (o *StringArray) TypeName() string {
 ```
 
 You can use a user type via either
-[Script.Add](https://godoc.org/github.com/d5/tengo#Script.Add) or by directly
+[Script.Add](https://godoc.org/github.com/ckcfcc/tengo#Script.Add) or by directly
 manipulating the symbol table and the global variables. Here's an example code
 to add `StringArray` to the script:
 

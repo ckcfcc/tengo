@@ -38,7 +38,7 @@ Here's a list of all available value types in Tengo.
 | immutable map | [immutable](#immutable-values) map | - |
 | undefined | [undefined](#undefined-values) value | - |
 | function | [function](#function-values) value | - |
-| _user-defined_ | value of [user-defined types](https://github.com/d5/tengo/blob/master/docs/objects.md) | - |
+| _user-defined_ | value of [user-defined types](https://github.com/ckcfcc/tengo/blob/master/docs/objects.md) | - |
 
 ### Error Values
 
@@ -269,7 +269,7 @@ a = [1, 2, 3]   // re-assigned 'array'
 
 Although the type is not directly specified in Tengo, one can use type
 conversion
-[builtin functions](https://github.com/d5/tengo/blob/master/docs/builtins.md)
+[builtin functions](https://github.com/ckcfcc/tengo/blob/master/docs/builtins.md)
 to convert between value types.
 
 ```golang
@@ -280,7 +280,7 @@ b4 := bool(1)         // true
 c5 := char("X")       // 'X'
 ```
 
-See [Operators](https://github.com/d5/tengo/blob/master/docs/operators.md)
+See [Operators](https://github.com/ckcfcc/tengo/blob/master/docs/operators.md)
 for more details on type coercions.
 
 ## Operators
@@ -295,7 +295,7 @@ for more details on type coercions.
 | `^`   | bitwise complement | int |
 
 _In Tengo, all values can be either
-[truthy or falsy](https://github.com/d5/tengo/blob/d5-patch-1/docs/runtime-types.md#objectisfalsy)._
+[truthy or falsy](https://github.com/ckcfcc/tengo/blob/d5-patch-1/docs/runtime-types.md#objectisfalsy)._
 
 ### Binary Operators
 
@@ -320,7 +320,7 @@ _In Tengo, all values can be either
 | `>`   | greater than | int, float, char, time, string |
 | `>=`   | greater than or equal to | int, float, char, time, string |
 
-_See [Operators](https://github.com/d5/tengo/blob/master/docs/operators.md)
+_See [Operators](https://github.com/ckcfcc/tengo/blob/master/docs/operators.md)
 for more details._
 
 ### Ternary Operators
@@ -516,7 +516,7 @@ Thus, `sum := import("./sum")` is equivalent to `sum := import("./sum.tengo")`.
     If using Tengo as a library in Go, the file extension name "`.tengo`" can
     be customized. In that case, use the `SetImportFileExt` function of the
     `Compiler` type.
-    See the [Go reference](https://pkg.go.dev/github.com/d5/tengo/v2) for details.
+    See the [Go reference](https://pkg.go.dev/github.com/ckcfcc/tengo/v2) for details.
 
 In Tengo, modules are very similar to functions.
 
@@ -532,7 +532,7 @@ In Tengo, modules are very similar to functions.
   the code is executed as a main module.
 
 Also, you can use `import` expression to load the
-[Standard Library](https://github.com/d5/tengo/blob/master/docs/stdlib.md) as
+[Standard Library](https://github.com/ckcfcc/tengo/blob/master/docs/stdlib.md) as
 well.
 
 ```golang

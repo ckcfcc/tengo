@@ -1,8 +1,8 @@
 # The Tengo Language
 
-[![GoDoc](https://godoc.org/github.com/d5/tengo/v2?status.svg)](https://godoc.org/github.com/d5/tengo/v2)
-![test](https://github.com/d5/tengo/workflows/test/badge.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/d5/tengo)](https://goreportcard.com/report/github.com/d5/tengo)
+[![GoDoc](https://godoc.org/github.com/ckcfcc/tengo/v2?status.svg)](https://godoc.org/github.com/ckcfcc/tengo/v2)
+![test](https://github.com/ckcfcc/tengo/workflows/test/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ckcfcc/tengo)](https://goreportcard.com/report/github.com/ckcfcc/tengo)
 
 **Tengo is a small, dynamic, fast, secure script language for Go.** 
 
@@ -32,24 +32,24 @@ fmt.println(sum("", [1, 2, 3]))  // "123"
 ## Features
 
 - Simple and highly readable
-  [Syntax](https://github.com/d5/tengo/blob/master/docs/tutorial.md)
+  [Syntax](https://github.com/ckcfcc/tengo/blob/master/docs/tutorial.md)
   - Dynamic typing with type coercion
   - Higher-order functions and closures
   - Immutable values
-- [Securely Embeddable](https://github.com/d5/tengo/blob/master/docs/interoperability.md)
-  and [Extensible](https://github.com/d5/tengo/blob/master/docs/objects.md)
+- [Securely Embeddable](https://github.com/ckcfcc/tengo/blob/master/docs/interoperability.md)
+  and [Extensible](https://github.com/ckcfcc/tengo/blob/master/docs/objects.md)
 - Compiler/runtime written in native Go _(no external deps or cgo)_
 - Executable as a
-  [standalone](https://github.com/d5/tengo/blob/master/docs/tengo-cli.md)
+  [standalone](https://github.com/ckcfcc/tengo/blob/master/docs/tengo-cli.md)
   language / REPL
 - Use cases: rules engine, [state machine](https://github.com/d5/go-fsm),
-  data pipeline, [transpiler](https://github.com/d5/tengo2lua)
+  data pipeline, [transpiler](https://github.com/ckcfcc/tengo2lua)
 
 ## Benchmark
 
 | | fib(35) | fibt(35) |  Language (Type)  |
 | :--- |    ---: |     ---: |  :---: |
-| [**Tengo**](https://github.com/d5/tengo) | `2,315ms` | `3ms` | Tengo (VM) |
+| [**Tengo**](https://github.com/ckcfcc/tengo) | `2,315ms` | `3ms` | Tengo (VM) |
 | [go-lua](https://github.com/Shopify/go-lua) | `4,028ms` | `3ms` | Lua (VM) |
 | [GopherLua](https://github.com/yuin/gopher-lua) | `4,409ms` | `3ms` | Lua (VM) |
 | [goja](https://github.com/dop251/goja) | `5,194ms` | `4ms` | JavaScript (VM) |
@@ -63,17 +63,17 @@ fmt.println(sum("", [1, 2, 3]))  // "123"
 | Lua | `756ms` | `2ms` | Lua (Native) |
 | Python | `1,907ms` | `14ms` | Python2 (Native) |
 
-_* [fib(35)](https://github.com/d5/tengobench/blob/master/code/fib.tengo):
+_* [fib(35)](https://github.com/ckcfcc/tengobench/blob/master/code/fib.tengo):
 Fibonacci(35)_  
-_* [fibt(35)](https://github.com/d5/tengobench/blob/master/code/fibtc.tengo):
+_* [fibt(35)](https://github.com/ckcfcc/tengobench/blob/master/code/fibtc.tengo):
 [tail-call](https://en.wikipedia.org/wiki/Tail_call) version of Fibonacci(35)_  
 _* **Go** does not read the source code from file, while all other cases do_  
-_* See [here](https://github.com/d5/tengobench) for commands/codes used_
+_* See [here](https://github.com/ckcfcc/tengobench) for commands/codes used_
 
 ## Quick Start
 
 ```
-go get github.com/d5/tengo/v2
+go get github.com/ckcfcc/tengo/v2
 ```
 
 A simple Go example code that compiles/runs Tengo script code with some input/output values:
@@ -85,7 +85,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/d5/tengo/v2"
+	"github.com/ckcfcc/tengo/v2"
 )
 
 func main() {
@@ -121,7 +121,7 @@ each([a, b, c, d], func(x) {
 }
 ```
 
-Or, if you need to evaluate a simple expression, you can use [Eval](https://pkg.go.dev/github.com/d5/tengo/v2#Eval) function instead:
+Or, if you need to evaluate a simple expression, you can use [Eval](https://pkg.go.dev/github.com/ckcfcc/tengo/v2#Eval) function instead:
 
 
 ```golang
@@ -136,15 +136,15 @@ fmt.Println(res) // "success"
 
 ## References
 
-- [Language Syntax](https://github.com/d5/tengo/blob/master/docs/tutorial.md)
-- [Object Types](https://github.com/d5/tengo/blob/master/docs/objects.md)
-- [Runtime Types](https://github.com/d5/tengo/blob/master/docs/runtime-types.md)
-  and [Operators](https://github.com/d5/tengo/blob/master/docs/operators.md)
-- [Builtin Functions](https://github.com/d5/tengo/blob/master/docs/builtins.md)
-- [Interoperability](https://github.com/d5/tengo/blob/master/docs/interoperability.md)
-- [Tengo CLI](https://github.com/d5/tengo/blob/master/docs/tengo-cli.md)
-- [Standard Library](https://github.com/d5/tengo/blob/master/docs/stdlib.md)
-- Syntax Highlighters: [VSCode](https://github.com/lissein/vscode-tengo), [Atom](https://github.com/d5/tengo-atom), [Vim](https://github.com/geseq/tengo-vim)
+- [Language Syntax](https://github.com/ckcfcc/tengo/blob/master/docs/tutorial.md)
+- [Object Types](https://github.com/ckcfcc/tengo/blob/master/docs/objects.md)
+- [Runtime Types](https://github.com/ckcfcc/tengo/blob/master/docs/runtime-types.md)
+  and [Operators](https://github.com/ckcfcc/tengo/blob/master/docs/operators.md)
+- [Builtin Functions](https://github.com/ckcfcc/tengo/blob/master/docs/builtins.md)
+- [Interoperability](https://github.com/ckcfcc/tengo/blob/master/docs/interoperability.md)
+- [Tengo CLI](https://github.com/ckcfcc/tengo/blob/master/docs/tengo-cli.md)
+- [Standard Library](https://github.com/ckcfcc/tengo/blob/master/docs/stdlib.md)
+- Syntax Highlighters: [VSCode](https://github.com/lissein/vscode-tengo), [Atom](https://github.com/ckcfcc/tengo-atom), [Vim](https://github.com/geseq/tengo-vim)
 - **Why the name Tengo?** It's from [1Q84](https://en.wikipedia.org/wiki/1Q84).
 
 
