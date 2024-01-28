@@ -19,16 +19,16 @@ var (
 
 const (
 	// GlobalsSize is the maximum number of global variables for a VM.
-	GlobalsSize = 1024
+	GlobalsSize = 1024 * 4
 
 	// StackSize is the maximum stack size for a VM.
-	StackSize = 2048
+	StackSize = 2048 * 4
 
 	// MaxFrames is the maximum number of function frames for a VM.
-	MaxFrames = 1024
+	MaxFrames = 1024 * 4
 
 	// SourceFileExtDefault is the default extension for source files.
-	SourceFileExtDefault = ".tengo"
+	SourceFileExtDefault = ".wds"
 )
 
 // CallableFunc is a function signature for the callable functions.
