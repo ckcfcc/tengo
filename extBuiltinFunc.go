@@ -7,7 +7,7 @@ func (s *Script) AddFunction(name string, val func(args ...Object) (Object, erro
 	builtinFuncs = append(builtinFuncs, &BuiltinFunction{Name: name, Value: val})
 }
 
-func (s *Script) AddFuncs(funcs []*BuiltinFunction) {
+func (s *Script) AddFunctions(funcs []*BuiltinFunction) {
 	for _, f := range funcs {
 		if s.builtinIsExist(f.Name) {
 			return
