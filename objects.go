@@ -480,14 +480,12 @@ func (o *Char) BinaryOp(op token.Token, rhs Object) (Object, error) {
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Char{Value: r}, nil
 		case token.Sub:
 			r := o.Value - rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Char{Value: r}, nil
 		case token.Less:
 			if o.Value < rhs.Value {
@@ -518,13 +516,11 @@ func (o *Char) BinaryOp(op token.Token, rhs Object) (Object, error) {
 				return o, nil
 			}
 			return &Char{Value: r}, nil
-			o.Value = r
 		case token.Sub:
 			r := o.Value - rune(rhs.Value)
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Char{Value: r}, nil
 		case token.Less:
 			if int64(o.Value) < rhs.Value {
@@ -694,28 +690,24 @@ func (o *Float) BinaryOp(op token.Token, rhs Object) (Object, error) {
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Float{Value: r}, nil
 		case token.Sub:
 			r := o.Value - rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Float{Value: r}, nil
 		case token.Mul:
 			r := o.Value * rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Float{Value: r}, nil
 		case token.Quo:
 			r := o.Value / rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Float{Value: r}, nil
 		case token.Less:
 			if o.Value < rhs.Value {
@@ -745,28 +737,24 @@ func (o *Float) BinaryOp(op token.Token, rhs Object) (Object, error) {
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Float{Value: r}, nil
 		case token.Sub:
 			r := o.Value - float64(rhs.Value)
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Float{Value: r}, nil
 		case token.Mul:
 			r := o.Value * float64(rhs.Value)
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Float{Value: r}, nil
 		case token.Quo:
 			r := o.Value / float64(rhs.Value)
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Float{Value: r}, nil
 		case token.Less:
 			if o.Value < float64(rhs.Value) {
@@ -1025,42 +1013,36 @@ func (o *Int) BinaryOp(op token.Token, rhs Object) (Object, error) {
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.Sub:
 			r := o.Value - rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.Mul:
 			r := o.Value * rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.Quo:
 			r := o.Value / rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.Rem:
 			r := o.Value % rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.And:
 			r := o.Value & rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.Or:
 			r := o.Value | rhs.Value
@@ -1073,28 +1055,24 @@ func (o *Int) BinaryOp(op token.Token, rhs Object) (Object, error) {
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.AndNot:
 			r := o.Value &^ rhs.Value
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.Shl:
 			r := o.Value << uint64(rhs.Value)
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.Shr:
 			r := o.Value >> uint64(rhs.Value)
 			if r == o.Value {
 				return o, nil
 			}
-			o.Value = r
 			return &Int{Value: r}, nil
 		case token.Less:
 			if o.Value < rhs.Value {
